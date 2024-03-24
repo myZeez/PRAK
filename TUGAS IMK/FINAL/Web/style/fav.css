@@ -1,0 +1,21 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.em-img {
+    width: 600px;
+}
+
+.desc {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.desc a {
+    font-weight: 500;
+    color: #00D1FF;
+}

@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    color: rgb(255,255,255);
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(49, 40, 77);
+    margin: 0;
+}
+
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0px 100px;
+    background-color: rgba(15, 23, 42, .5);
+    backdrop-filter: blur(4px);
+}
+
+.left-nav {
+    flex: 1;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mid-nav {
+    flex: 5;
+    padding-right: 100px;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    column-gap: 60px;
+    font-size: 16px;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid white;
+    transform: scaleX(0);
+    transition: .2s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(.5);
+}
+
+.nav-link {
+    font-weight: 400;
+}
+
+.right-nav {
+    width: 245px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: rgb(136 137 133);
+    width: 110px;
+    height: 35px;
+    border-radius: 23px;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: .2s linear;
+}
+
+.btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(136 137 133);
+}
+
+.home {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container{
+    width: 400px;
+    height: 200px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    font-size: 32px;
+    position: relative;
+    text-align: left;
+    font-weight: 500;
+}
+
+.sec-text {
+    color: red;
+    margin-left: 5px;
+}
+
+.sec-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(49, 40, 77);
+    border-left: 2px solid yellow;
+    animation-name: animate, blinking;
+    animation-duration: 2s, .5s;
+    animation-timing-function: steps(5), linear;
+    animation-iteration-count: infinite, infinite;
+}
+
+@keyframes animate{
+    20%, 80% {
+        left: 100%;
+    } 100% {
+        left: 0;
+    }
+}
+
+@keyframes blinking {
+    100% {
+        border-left: black;
+    } 50% {
+        border-left: 2px solid yellow;
+    }
+}
